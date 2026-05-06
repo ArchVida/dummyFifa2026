@@ -559,6 +559,29 @@
         <div class="support__card">
           <h3 class="support__title">Contact Customer Support</h3>
           <p class="support__sub">Tell us how we can help.</p>
+			
+<!-- Salesforce Embedded Messaging for Web (MIAW) -->
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DV9000004uKg5',
+				'Agentforce_Iris',
+				'https://onlocationexp--staging.sandbox.my.site.com/ESWAgentforceIris1778055798781',
+				{
+					scrt2URL: 'https://onlocationexp--staging.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://onlocationexp--staging.sandbox.my.site.com/ESWAgentforceIris1778055798781/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+			
           <form class="support__form" onsubmit="event.preventDefault(); this.reset(); alert('Thanks — we will be in touch shortly.');">
             <div class="support__row">
               <label>First Name <span>*</span><input type="text" name="first" required></label>
@@ -667,28 +690,9 @@
 
   <script src="script.js"></script>
 
-  <!-- Salesforce Embedded Messaging for Web (MIAW) -->
-  <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DV9000004uKg5',
-				'Agentforce_Iris',
-				'https://onlocationexp--staging.sandbox.my.site.com/ESWAgentforceIris1778055798781',
-				{
-					scrt2URL: 'https://onlocationexp--staging.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://onlocationexp--staging.sandbox.my.site.com/ESWAgentforceIris1778055798781/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
-  <!--
+  
+    <!-- Salesforce Embedded Messaging for Web (MIAW) -->
+<!--
   <script type="text/javascript">
     function initEmbeddedMessaging() {
       try {
