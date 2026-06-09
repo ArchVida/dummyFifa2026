@@ -691,6 +691,7 @@
 -->
 
 <!-- UAT Agent -->
+<!--
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -710,7 +711,28 @@
 	};
 </script>
 <script type='text/javascript' src='https://onlocationexp--agentuat.sandbox.my.site.com/ESWAgentforceIris1778055798781/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+-->
+	
+<!-- William Voice Demo Org -->	
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
+			embeddedservice_bootstrap.init(
+				'00DKa00000W3uBK',
+				'CLT_Example_Channel',
+				'https://storm-ec1648da805b56.my.site.com/ESWCLTExampleChannel1780964472640',
+				{
+					scrt2URL: 'https://storm-ec1648da805b56.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://storm-ec1648da805b56.my.site.com/ESWCLTExampleChannel1780964472640/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 	
 </body>
